@@ -6,8 +6,15 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		79B4886C7D24841248D444F2 /* Pods_MemoriesData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2331695BBADB320125114215 /* Pods_MemoriesData.framework */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		1E49D68C2D390D2400D7273F /* MemoriesData.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MemoriesData.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2331695BBADB320125114215 /* Pods_MemoriesData.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MemoriesData.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7E7715D32F0BE8A8AD97B99F /* Pods-MemoriesData.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MemoriesData.release.xcconfig"; path = "Target Support Files/Pods-MemoriesData/Pods-MemoriesData.release.xcconfig"; sourceTree = "<group>"; };
+		BCD925A811AB0781B12599EB /* Pods-MemoriesData.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MemoriesData.debug.xcconfig"; path = "Target Support Files/Pods-MemoriesData/Pods-MemoriesData.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -23,6 +30,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79B4886C7D24841248D444F2 /* Pods_MemoriesData.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -34,6 +42,8 @@
 			children = (
 				1E49D68E2D390D2400D7273F /* MemoriesData */,
 				1E49D68D2D390D2400D7273F /* Products */,
+				9BF35D173B35140FA9535842 /* Pods */,
+				FA944778F672692B20A9A4A7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -45,6 +55,23 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		9BF35D173B35140FA9535842 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BCD925A811AB0781B12599EB /* Pods-MemoriesData.debug.xcconfig */,
+				7E7715D32F0BE8A8AD97B99F /* Pods-MemoriesData.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		FA944778F672692B20A9A4A7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2331695BBADB320125114215 /* Pods_MemoriesData.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -52,6 +79,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1E49D69C2D390D2600D7273F /* Build configuration list for PBXNativeTarget "MemoriesData" */;
 			buildPhases = (
+				38C2D133A181B84C75B54EEE /* [CP] Check Pods Manifest.lock */,
 				1E49D6882D390D2400D7273F /* Sources */,
 				1E49D6892D390D2400D7273F /* Frameworks */,
 				1E49D68A2D390D2400D7273F /* Resources */,
@@ -64,8 +92,6 @@
 				1E49D68E2D390D2400D7273F /* MemoriesData */,
 			);
 			name = MemoriesData;
-			packageProductDependencies = (
-			);
 			productName = MemoriesData;
 			productReference = 1E49D68C2D390D2400D7273F /* MemoriesData.app */;
 			productType = "com.apple.product-type.application";
@@ -113,6 +139,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		38C2D133A181B84C75B54EEE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MemoriesData-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1E49D6882D390D2400D7273F /* Sources */ = {
@@ -246,6 +297,7 @@
 		};
 		1E49D69D2D390D2600D7273F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BCD925A811AB0781B12599EB /* Pods-MemoriesData.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -274,6 +326,7 @@
 		};
 		1E49D69E2D390D2600D7273F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7E7715D32F0BE8A8AD97B99F /* Pods-MemoriesData.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
